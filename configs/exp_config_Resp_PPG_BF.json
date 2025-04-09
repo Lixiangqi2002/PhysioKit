@@ -1,0 +1,27 @@
+{
+    "exp":
+    {
+        "study_name": "Demo",
+        "conditions": ["baseline", "expCond1"],
+        "channels": ["Resp", "PPG"],
+        "channel_types": ["resp", "ppg"],
+        "timed_acquisition": true,
+        "assess_signal_quality": true,
+        "max_time_seconds": [180, 180],
+        "datapath": "data",
+        "event_codes": {
+            "0": "event_1",
+            "1": "event_2"
+        }
+    },
+    "biofeedback": {
+        "enabled": true,
+        "ch_index": 0,
+        "metric": "RSP",
+        "window": 0.1,
+        "step": 0.05,
+        "modulation_threshold": 225,
+        "mapping": "linear_increase",
+        "type": "generic_uart"
+    }
+}
